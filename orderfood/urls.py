@@ -26,3 +26,28 @@ urlpatterns = [
     path('contact/', contact, name="contact"),
     path('success-page/', success_page, name="success_page"),
 ]
+# from django.contrib import admin
+# from django.urls import path
+# from home.views import *
+# from vege.views import *
+# from django.conf.urls.static import static
+# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+# from django.conf import settings
+# urlpatterns = [
+#     path('', home),
+#     path('recipes/', reciepe),
+#     path('delete-reciepe/<id>/', delete_reciepe),
+#     path('update-reciepe/<id>/', update_reciepe),
+#     path('about/', about),
+#     path('contact/', contact),
+#     path('success-page/', success_page),
+#     path('admin/', admin.site.urls),
+#     #auth
+#     path('login/', login_page),
+#     path('register/', register),
+#     path('logout/', logout_page),
+# ]
+
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += staticfiles_urlpatterns()

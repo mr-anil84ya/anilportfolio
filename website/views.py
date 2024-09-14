@@ -37,7 +37,6 @@ def web(request):
             phone = request.POST.get('phone')
             subject = request.POST.get('subject')
             message = request.POST.get('message')
-
             message_body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\n\nMessage:\n{message}"
             print(message_body)
             # Create a custom SSL context
@@ -49,7 +48,7 @@ def web(request):
                     smtp.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
                     smtp.sendmail(
                         settings.EMAIL_HOST_USER,
-                        ['anil.focuscode@gmail.com'],
+                        [email],
                         f"Subject: {subject}\n\n{message_body}"
                     )
                 return redirect('success')
